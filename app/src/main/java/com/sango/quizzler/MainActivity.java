@@ -2,9 +2,9 @@ package com.sango.quizzler;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -45,14 +45,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                Log.d("Quizzler", "True");
+                Toast.makeText(getApplicationContext(), "True!", Toast.LENGTH_SHORT).show();
             }
         });
 
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Quizzler", "False");
+                Toast.makeText(getApplicationContext(), "False!", Toast.LENGTH_SHORT).show();
             }
         });
 
