@@ -1,13 +1,16 @@
-package com.londonappbrewery.quizzler;
+package com.sango.quizzler;
 
 import android.app.Activity;
 import android.os.Bundle;
-
-import com.sango.quizzler.R;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
     // TODO: Declare constants here
+    Button mTrueButton;
+    Button mFalseButton;
 
 
     // TODO: Declare member variables here:
@@ -35,6 +38,23 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mTrueButton = (Button) findViewById(R.id.true_button);
+        mFalseButton = (Button) findViewById(R.id.false_button);
+
+        mTrueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.d("Quizzler", "True");
+            }
+        });
+
+        mFalseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Quizzler", "False");
+            }
+        });
 
 
     }
